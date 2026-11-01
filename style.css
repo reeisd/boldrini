@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 40px 24px;
+    background-color: #f7f5ef;
+    color: #242620;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 64px;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p,
+li {
+    font-size: 18px;
+    line-height: 1.6;
+}
