@@ -82,3 +82,37 @@ section {
     color: #ffffff;
     border-radius: 999px;
 }
+
+.tratamentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 20px;
+}
+
+.tratamento {
+    padding: 32px;
+    background-color: #eae8e1;
+    border-radius: 24px;
+}
+
+.tratamento h3 {
+    margin-top: 0;
+    font-size: 26px;
+}
+
+.destaque {
+    background-color: #dce5d4;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tratamento a {
+    display: inline-block;
+    margin-top: 16px;
+    font-weight: bold;
+}
