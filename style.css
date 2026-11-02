@@ -85,7 +85,7 @@ section {
 
 .tratamentos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
 
@@ -124,4 +124,10 @@ section {
     color: #ffffff;
     border-radius: 999px;
     font-weight: bold;
+}
+
+@media (max-width: 640px) {
+    .tratamentos-grid {
+        grid-template-columns: 1fr;
+    }
 }
