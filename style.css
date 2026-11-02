@@ -45,7 +45,7 @@ nav {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:focus-visible {
@@ -90,7 +90,10 @@ section {
 }
 
 .tratamento {
+    position: relative;
+    overflow: hidden;
     padding: 32px;
+    padding-right: 38%;
     background-color: #eae8e1;
     border-radius: 24px;
 }
@@ -129,5 +132,104 @@ section {
 @media (max-width: 640px) {
     .tratamentos-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+body {
+    padding: 0;
+}
+
+header {
+    display: block;
+    max-width: none;
+    background-color: #F5F2B8;
+}
+
+.header-conteudo {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.header-conteudo > a {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+main,
+footer {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#inicio {
+    padding-top: 40px;
+}
+
+#inicio h1 {
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+#inicio p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+#inicio > a {
+    margin-top: 0;
+}
+
+#inicio {
+    padding-bottom: 32px;
+}
+
+#tratamentos {
+    padding-top: 24px;
+}
+
+#tratamentos > h2 {
+    margin-top: 0;
+}
+
+.produto-imagem {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    mask-image: linear-gradient(to right, transparent, black 28%);
+}
+
+.foto-labial {
+    object-position: 70% 50%;
+}
+
+.foto-bioestimulador {
+    object-position: 25% 32%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .produto-imagem {
+        opacity: 0;
+        transition: opacity 300ms ease;
+    }
+
+    .tratamento:hover .produto-imagem,
+    .tratamento:focus-within .produto-imagem {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .produto-imagem {
+        transition: none;
     }
 }
